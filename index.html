@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Maritim Armada Raya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Adding smooth scroll effect -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- Fade-in animation script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".fade-in");
+            elements.forEach(el => {
+                el.classList.add("visible");
+            });
+        });
+    </script>
+    
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="PT. Maritim Armada Raya Logo" class="logo">
+            <div class="company-name">
+                <h1>PT. Maritim Armada Raya</h1>
+                <p>Reliable Sea Transportation, Bright Future</p>
+            </div>
+            <nav>
+                <a href="#about">About Us</a>
+                <a href="#services">Our Services</a>
+                <a href="#clients">Clients & Vendors</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section-container">
+        <h2>About Us</h2>
+        <div class="content-wrapper fade-in">
+            <div class="about-image">
+                <img src="images/about.png" alt="Sea Transport Image">
+            </div>
+            <div class="content-text fade-in">
+                <p>Established in 2022, PT. Maritim Armada Raya specializes in domestic sea freight, focusing on bulk coal transport across Indonesia with a reliable fleet and strong partnerships.</p>
+                <h3>Vision</h3>
+                <p>To be a leading regional sea transportation company, providing safe and reliable services.</p>
+                <h3>Mission</h3>
+                <ul>
+                    <li>Establish strong, beneficial partnerships with stakeholders.</li>
+                    <li>Enhance human resource competencies.</li>
+                    <li>Add value to mining logistics transport.</li>
+                </ul>
+            </div>            
+        </div>
+    </section>
+    
+    <section id="services" class="section-container">
+        <h2>Our Services</h2>
+        <div class="content-wrapper fade-in">
+            <div class="services-image">
+                <img src="images/service.png" alt="Coal Transport Image">
+            </div>
+            <div class="content-text">
+                <p>We specialize in carrying bulk commodities using various sizes of tugs and barges for both transshipment and domestic shipment.</p>
+                <h3>Domestic Shipment</h3>
+                <p>Our domestic shipping services connect multiple loading ports in Kalimantan and Sumatera with discharging ports across Sulawesi, Sumatera, and Java Island.</p>
+                <h3>Transshipment</h3>
+                <p>We provide transshipment services at various locations, including Taboneso, Satui, and Tanjung Pemancingan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="fade-in">
+        <h2>Clients & Vendors</h2>
+        <h3>Our Clients</h3>
+        <div class="clients-logos">
+            <img src="images/client/RAP.png" alt="Client 1 Logo">
+            <img src="images/client/JEA.png" alt="Client 2 Logo">
+            <img src="images/client/TIE.png" alt="Client 3 Logo">
+            <img src="images/client/CG2.png" alt="Client 4 Logo">
+            <img src="images/client/VULS.png" alt="Client 5 Logo">
+            <img src="images/client/CM.png" alt="Client 6 Logo">
+            <img src="images/client/TPM.png" alt="Client 7 Logo">
+            <img src="images/client/ABG.png" alt="Client 8 Logo">
+            <!-- Add additional client logos as necessary -->
+        </div>
+        <h3>Our Vendors</h3>
+        <div class="vendors-logos">
+            <img src="images/vendor/DSA.png" alt="Vendor 1 Logo">
+            <img src="images/vendor/MBSS.png" alt="Vendor 2 Logo">
+            <img src="images/vendor/BSG.png" alt="Vendor 3 Logo">
+            <img src="images/vendor/PSRI.jpg" alt="Vendor 4 Logo">
+            <img src="images/vendor/BLS.png" alt="Vendor 5 Logo">
+            <img src="images/vendor/SKN.png" alt="Vendor 6 Logo">
+            <!-- Add additional vendor logos as necessary -->
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <address>
+            Graha MIR Lt. 3, Jl. Pemuda No. 9, Rawamangun, Jakarta Timur - 13220<br>
+            Phone: +62 21 22487588<br>
+            Email: <a href="mailto:admin@armadaraya.co.id">admin@armadaraya.co.id</a>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 PT. Maritim Armada Raya. All rights reserved.</p>
+    </footer>
+</body>
+<!-- Scroll to Top Button -->
+<div id="scrollTopBtn" onclick="scrollToTop()">&#8679;</div>
+</html>
+<script>
+    // Show or hide the scroll button based on scroll position
+    window.onscroll = function() {
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.classList.add("active");
+        } else {
+            scrollBtn.classList.remove("active");
+        }
+    };
+
+    // Scroll to the top when button is clicked
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        const faders = document.querySelectorAll(".fade-in");
+
+        window.addEventListener("scroll", () => {
+            faders.forEach((el) => {
+                const top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    el.classList.add("visible");
+                }
+            });
+        });
+    });
+</script>
+
