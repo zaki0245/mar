@@ -186,25 +186,23 @@ nav a:hover::after {
     font-size: 1.3rem;
 }
 
-.content-text p,
 /* Mission List Styling */
 .content-text ul {
-    list-style-type: none; /* Removes default bullet points */
+    list-style-type: none;
     padding-left: 0;
 }
 
 .content-text ul li {
     position: relative;
-    padding-left: 1.5rem; /* Adds space before each list item text */
+    padding-left: 1.5rem;
     margin-bottom: 0.5rem;
-    text-indent: 0.5rem; /* Adds an additional indent for aesthetic spacing */
+    text-indent: 0.5rem;
 }
 
-/* Custom Bullet Point */
 .content-text ul li::before {
-    content: "•"; /* Adds a custom bullet */
+    content: "•";
     position: absolute;
-    left: 0; /* Positions the bullet to the left of the text */
+    left: 0;
     color: #004080;
     font-size: 1.2rem;
 }
@@ -249,54 +247,47 @@ footer {
     visibility: visible;
 }
 
-/* Clients & Vendors Section */
+/* Clients & Vendors Wrapper */
 .clients-vendors-wrapper {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    flex-wrap: nowrap;
 }
 
+/* Clients and Vendors Boxes */
 .clients-logos,
 .vendors-logos {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    flex: 1;
     padding: 1.5rem;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: 1200px;
-    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    max-width: 100%;
 }
 
-/* Subheading Styling for Left Alignment */
+/* Section Headings */
 .clients-logos h3,
 .vendors-logos h3 {
+    grid-column: 1 / -1;
     font-size: 1.5rem;
     color: #004080;
-    margin: 0;
-    padding-left: 1rem;
-    border-left: 4px solid #004080; /* Vertical border for emphasis */
-    font-weight: bold;
-    text-align: left;
-    white-space: nowrap; /* Prevents text from wrapping */
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 0.5rem;
 }
 
-/* Logo Grid Styling */
-.clients-logos .logo-container,
-.vendors-logos .logo-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1.5rem;
-    flex: 1; /* Ensures the logos take up remaining space */
-}
-
+/* Logo Styling */
 .clients-logos img,
 .vendors-logos img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100px;
+    max-width: 80px;
     max-height: 60px;
     object-fit: contain;
     border-radius: 4px;
@@ -304,6 +295,7 @@ footer {
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
 }
 
 .clients-logos img:hover,
@@ -312,9 +304,7 @@ footer {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Contact Section */
-
 #contact {
     margin-bottom: 1rem;
 }
@@ -333,21 +323,105 @@ footer {
     max-width: 400px;
 }
 
-.contact-wrapper p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    color: #333;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .clients-vendors-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients-logos,
+    .vendors-logos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .section-container,
+    #clients,
+    #contact {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        box-shadow: none;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image,
+    .services-image {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .content-text {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .clients-logos h3,
+    .vendors-logos h3 {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .contact-wrapper address {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
 }
 
-.contact-wrapper a {
-    color: #004080;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+@media (max-width: 480px) {
+    .company-name h1 {
+        font-size: 1.25rem;
+    }
 
-.contact-wrapper a:hover {
-    color: #0056b3;
+    .company-name p {
+        font-size: 0.9rem;
+    }
+
+    .section-container h2,
+    #clients h2,
+    #contact h2 {
+        font-size: 1.75rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    #scrollTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
 }
 
 /* Animations */
@@ -375,132 +449,4 @@ footer {
 
 html {
     scroll-behavior: smooth;
-}
-
-/* Responsive Design for Mobile Screens */
-@media (max-width: 768px) {
-    /* Header and Navigation */
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .logo-container {
-        margin-bottom: 1rem;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 0.5rem 0;
-    }
-
-    /* Section Containers */
-    .section-container,
-    #clients,
-    #contact {
-        padding: 1.5rem;
-        margin-top: 1.5rem;
-        box-shadow: none; /* Optional: remove shadow on smaller screens for simplicity */
-    }
-
-    /* Content Wrapper for About Us and Services */
-    .content-wrapper {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center;
-    }
-
-    .about-image,
-    .services-image {
-        max-width: 100%; /* Allow images to scale down */
-        margin-bottom: 1rem; /* Add space below the image */
-    }
-
-    .content-text {
-        max-width: 100%;
-        padding: 1rem;
-    }
-
-    /* Clients & Vendors Section */
-    .clients-vendors-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .clients-logos,
-    .vendors-logos {
-        width: 100%; /* Ensure full width for better readability on small screens */
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .clients-logos h3,
-    .vendors-logos h3 {
-        text-align: center; /* Center-align subheadings */
-        border-left: none; /* Remove the left border for cleaner look on small screens */
-        padding-left: 0;
-        margin-bottom: 1rem;
-    }
-
-    /* Logo Grid for Small Screens */
-    .clients-logos .logo-container,
-    .vendors-logos .logo-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller logos in a grid */
-        gap: 1rem;
-    }
-
-    /* Contact Section */
-    .contact-wrapper address {
-        padding: 1rem;
-        max-width: 100%;
-    }
-
-    /* Footer */
-    footer {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further Adjustments for Very Small Screens */
-    .company-name h1 {
-        font-size: 1.25rem;
-    }
-
-    .company-name p {
-        font-size: 0.9rem;
-    }
-
-    /* Section Titles */
-    .section-container h2,
-    #clients h2,
-    #contact h2 {
-        font-size: 1.75rem;
-    }
-
-    /* Navigation Links */
-    nav a {
-        font-size: 1rem;
-    }
-
-    /* Logo Container in Clients & Vendors */
-    .clients-logos .logo-container,
-    .vendors-logos .logo-container {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Smaller logos */
-    }
-
-    /* Scroll to Top Button */
-    #scrollTopBtn {
-        bottom: 20px;
-        right: 20px;
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
-    }
 }
