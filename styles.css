@@ -140,31 +140,6 @@ address {
     transform: scale(1.05);
 }
 
-/* Animation styling */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Header Logo Animation */
-.logo {
-    animation: logoFadeIn 1.5s ease forwards;
-}
-@keyframes logoFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 /* Navigation Link Hover Animation */
 nav a {
@@ -200,8 +175,8 @@ nav a:hover::after {
 /* Scroll to Top Button Styling */
 #scrollTopBtn {
     position: fixed;
-    bottom: 75px;
-    right: 30px;
+    bottom: 80px; /* Distance from the bottom */
+    right: 40px; /* Distance from the right */
     width: 40px;
     height: 40px;
     background-color: #004080;
@@ -222,11 +197,12 @@ nav a:hover::after {
     background-color: #003366;
 }
 
-/* Show button when active */
+/* Show button when scrolling down */
 #scrollTopBtn.active {
     opacity: 1;
     visibility: visible;
 }
+
 
 /* Section Styling */
 .section-container {
@@ -275,22 +251,6 @@ nav a:hover::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Fade-in animation styling */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animations for text and images */
-.section-container h2 {
-    animation: slide-in 1s ease-out forwards;
-}
-
 @keyframes slide-in {
     from {
         opacity: 0;
@@ -300,6 +260,31 @@ nav a:hover::after {
         opacity: 1;
         transform: translateX(0);
     }
+}
+/* Center-align the main section titles and add spacing below */
+section#clients h2,
+section#contact h2 {
+    text-align: center;
+    margin-bottom: 2rem; /* Adds spacing between title and content */
+}
+
+/* Align the subheadings for clients and vendors to the left */
+.centered-subtitle {
+    text-align: left;
+    color: #004080;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Add padding to the client and vendor logos for better spacing */
+.clients-logos, .vendors-logos {
+    padding-top: 1rem; /* Adds space between the subtitle and logos */
+}
+
+/* Adjust the address section in contact for better readability */
+address {
+    padding-top: 0.5rem; /* Adds spacing between title and address content */
+    line-height: 1.6;
 }
 
 
