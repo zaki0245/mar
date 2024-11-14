@@ -376,3 +376,131 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo-container {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    /* Section Containers */
+    .section-container,
+    #clients,
+    #contact {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        box-shadow: none; /* Optional: remove shadow on smaller screens for simplicity */
+    }
+
+    /* Content Wrapper for About Us and Services */
+    .content-wrapper {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-image,
+    .services-image {
+        max-width: 100%; /* Allow images to scale down */
+        margin-bottom: 1rem; /* Add space below the image */
+    }
+
+    .content-text {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    /* Clients & Vendors Section */
+    .clients-vendors-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients-logos,
+    .vendors-logos {
+        width: 100%; /* Ensure full width for better readability on small screens */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .clients-logos h3,
+    .vendors-logos h3 {
+        text-align: center; /* Center-align subheadings */
+        border-left: none; /* Remove the left border for cleaner look on small screens */
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Logo Grid for Small Screens */
+    .clients-logos .logo-container,
+    .vendors-logos .logo-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller logos in a grid */
+        gap: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-wrapper address {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further Adjustments for Very Small Screens */
+    .company-name h1 {
+        font-size: 1.25rem;
+    }
+
+    .company-name p {
+        font-size: 0.9rem;
+    }
+
+    /* Section Titles */
+    .section-container h2,
+    #clients h2,
+    #contact h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Navigation Links */
+    nav a {
+        font-size: 1rem;
+    }
+
+    /* Logo Container in Clients & Vendors */
+    .clients-logos .logo-container,
+    .vendors-logos .logo-container {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Smaller logos */
+    }
+
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
