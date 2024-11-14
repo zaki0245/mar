@@ -324,6 +324,7 @@ footer {
 }
 
 /* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -331,18 +332,22 @@ footer {
         padding: 1rem;
     }
 
+    /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
         align-items: center;
+        text-align: center; /* Center-aligns content within each box */
     }
 
     .clients-logos,
     .vendors-logos {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-rows: repeat(2, auto); /* Keeps two rows on mobile */
         width: 100%;
+        text-align: center; /* Ensures text and logos are centered */
     }
 
+    /* Navigation - Center links in mobile view */
     nav {
         display: flex;
         flex-direction: column;
@@ -353,30 +358,35 @@ footer {
         margin: 0.5rem 0;
     }
 
+    /* Section Containers */
     .section-container,
     #clients,
     #contact {
         padding: 1.5rem;
         margin-top: 1.5rem;
         box-shadow: none;
+        text-align: center; /* Center-aligns text inside section containers */
     }
 
+    /* Content Wrapper for About Us and Services */
     .content-wrapper {
         flex-direction: column;
-        text-align: center;
+        text-align: center; /* Center-aligns text and image in content sections */
     }
 
     .about-image,
     .services-image {
-        max-width: 100%;
+        max-width: 100%; /* Allow images to scale down */
         margin-bottom: 1rem;
     }
 
     .content-text {
         max-width: 100%;
         padding: 1rem;
+        text-align: center; /* Center-aligns text inside content-text */
     }
 
+    /* Center-align Clients and Vendors headings */
     .clients-logos h3,
     .vendors-logos h3 {
         text-align: center;
@@ -385,14 +395,17 @@ footer {
         margin-bottom: 1rem;
     }
 
+    /* Contact Section */
     .contact-wrapper address {
         padding: 1rem;
         max-width: 100%;
+        text-align: center; /* Ensures address text is centered */
     }
 
     footer {
         padding: 1rem;
         font-size: 0.9rem;
+        text-align: center; /* Centers footer text */
     }
 }
 
