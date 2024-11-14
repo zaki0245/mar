@@ -170,7 +170,7 @@ nav a:hover::after {
 .content-text {
     flex: 1;
     max-width: 600px;
-    text-align: left;
+    text-align: justify;
     font-size: 1rem;
     color: #333;
     line-height: 1.7;
@@ -365,7 +365,7 @@ footer {
         padding: 1.5rem;
         margin-top: 1.5rem;
         box-shadow: none;
-        text-align: center; /* Center-aligns text inside section containers */
+        text-align: justify; /* Center-aligns text inside section containers */
     }
 
     /* Content Wrapper for About Us and Services */
@@ -383,7 +383,7 @@ footer {
     .content-text {
         max-width: 100%;
         padding: 1rem;
-        text-align: center; /* Center-aligns text inside content-text */
+        text-align: justify; /* Center-aligns text inside content-text */
     }
 
     /* Center-align Clients and Vendors headings */
