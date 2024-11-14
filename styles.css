@@ -187,10 +187,26 @@ nav a:hover::after {
 }
 
 .content-text p,
+/* Mission List Styling */
 .content-text ul {
-    margin-bottom: 1rem;
-    text-align: justify;
-    color: #333;
+    list-style-type: none; /* Removes default bullet points */
+    padding-left: 0;
+}
+
+.content-text ul li {
+    position: relative;
+    padding-left: 1.5rem; /* Adds space before each list item text */
+    margin-bottom: 0.5rem;
+    text-indent: 0.5rem; /* Adds an additional indent for aesthetic spacing */
+}
+
+/* Custom Bullet Point */
+.content-text ul li::before {
+    content: "•"; /* Adds a custom bullet */
+    position: absolute;
+    left: 0; /* Positions the bullet to the left of the text */
+    color: #004080;
+    font-size: 1.2rem;
 }
 
 /* Footer Styling */
