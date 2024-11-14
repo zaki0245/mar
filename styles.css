@@ -284,6 +284,11 @@ footer {
 }
 
 /* Contact Section */
+
+#contact {
+    margin-bottom: 1rem;
+}
+
 .contact-wrapper {
     text-align: center;
 }
