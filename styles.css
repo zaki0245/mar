@@ -38,9 +38,9 @@ header {
 .logo {
     max-width: 80px;
     border-radius: 50%;
-    padding: 5px; /* Mengurangi padding untuk jarak lebih dekat */
+    padding: 5px;
     background-color: white;
-    margin-right: 30px; /* Mengontrol jarak dengan nama perusahaan */
+    margin-right: 30px;
 }
 
 .company-name h1 {
@@ -50,7 +50,7 @@ header {
 
 .company-name p {
     margin: 0;
-    font-size: 1rem; /* Sesuaikan ukuran subtitle jika diperlukan */
+    font-size: 1rem;
     font-style: italic;
     color: #d1e0f2;
 }
@@ -123,7 +123,6 @@ address {
     justify-content: center;
 }
 
-/* Styling individual logo containers */
 .clients-logos img, .vendors-logos img {
     display: block;
     margin: 0 auto;
@@ -140,7 +139,6 @@ address {
 .clients-logos img:hover, .vendors-logos img:hover {
     transform: scale(1.05);
 }
-
 
 /* Animation styling */
 .fade-in {
@@ -198,6 +196,7 @@ nav a:hover::after {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 /* Scroll to Top Button Styling */
 #scrollTopBtn {
     position: fixed;
@@ -228,6 +227,7 @@ nav a:hover::after {
     opacity: 1;
     visibility: visible;
 }
+
 /* Section Styling */
 .section-container {
     padding: 2rem;
@@ -238,7 +238,7 @@ nav a:hover::after {
     border-radius: 8px;
     margin: 1rem auto;
     text-align: center;
-    overflow: hidden; /* Helps contain animations */
+    overflow: hidden;
 }
 
 .section-container h2 {
