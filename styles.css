@@ -217,38 +217,80 @@ nav a:hover::after {
     overflow: hidden;
 }
 
-.section-container h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #004080;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* About Us and Our Services Styling */
+#about, #services {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
 }
 
-/* Content wrapper for About Us and Services */
+#about:hover, #services:hover {
+    transform: translateY(-5px); /* Hover effect to lift the section */
+}
+
+.section-container h2 {
+    font-size: 2.2rem;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 .content-wrapper {
     display: flex;
-    gap: 1.5rem;
     align-items: center;
+    gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.content-text {
-    flex: 1;
-    text-align: left;
-}
-
-/* About Us and Services Image Styling */
 .about-image, .services-image {
-    max-width: 250px;
+    max-width: 300px;
     flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
 .about-image img, .services-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover, .services-image img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.content-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content-text h3 {
+    margin-top: 1.5rem;
+    color: #004080;
+    font-size: 1.3rem;
+}
+
+.content-text p, .content-text ul {
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #333;
 }
 
 @keyframes slide-in {
@@ -288,13 +330,32 @@ address {
 }
 
 /* Clients & Vendors Styling */
-#clients {
-    background-color: #e8f0ff;
+/* Consistent Section Styling */
+.section-container, #clients, #contact {
+    background-color: #f0f8ff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.section-container:hover, #clients:hover, #contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Hover effect for lift and shadow */
+}
+
+/* Section Titles */
+.section-container h2, #clients h2, #contact h2 {
+    font-size: 2.2rem;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Client and Vendor Section Enhancements */
 .clients-vendors-wrapper {
     display: flex;
     justify-content: space-around;
@@ -319,13 +380,9 @@ address {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Contact Us Styling */
-#contact {
-    background-color: #f4f9ff;
-    padding: 2rem;
-    border-radius: 8px;
+/* Contact Section Enhancements */
+.contact-wrapper {
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-wrapper address {
@@ -334,6 +391,8 @@ address {
     border-radius: 8px;
     line-height: 1.6;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 .contact-wrapper p {
@@ -353,4 +412,19 @@ address {
     color: #0056b3;
 }
 
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-container, #clients, #contact {
+    animation: fadeIn 0.5s ease-out;
+}
 
