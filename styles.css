@@ -287,4 +287,70 @@ address {
     line-height: 1.6;
 }
 
+/* Clients & Vendors Styling */
+#clients {
+    background-color: #e8f0ff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clients-vendors-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.clients-vendors-wrapper h3 {
+    text-align: center;
+    color: #004080;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.clients-logos, .vendors-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Us Styling */
+#contact {
+    background-color: #f4f9ff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-wrapper address {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-wrapper p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-wrapper a {
+    color: #004080;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-wrapper a:hover {
+    color: #0056b3;
+}
+
 
