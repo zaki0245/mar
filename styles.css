@@ -333,15 +333,24 @@ footer {
     max-width: 400px;
 }
 
-/* Responsive adjustments */
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
+        position: relative;
+        width: 100%;
+        background: #004080;
+        transition: height 0.3s ease;
     }
 
+    /* Adjust header height when menu is open */
+    .header-content.open {
+        padding-bottom: 2rem;
+    }
+
+    /* Logo container */
     .logo-container {
         display: flex;
         flex-direction: column;
@@ -351,13 +360,15 @@ footer {
     .company-name h1 {
         font-size: 1.2rem;
         margin-top: 0.5rem;
+        color: #fff;
     }
 
     .company-name p {
         font-size: 0.9rem;
+        color: #d1e0f2;
     }
 
-    /* Hide the navigation links by default on mobile */
+    /* Navigation menu initially hidden */
     nav {
         display: none;
         flex-direction: column;
@@ -365,6 +376,14 @@ footer {
         gap: 0.5rem;
         margin-top: 1rem;
         width: 100%;
+        background: #004080;
+        padding: 1rem 0;
+    }
+
+    /* Show navigation when header is open */
+    .header-content.open nav {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
     }
 
     /* Hamburger menu icon */
@@ -383,13 +402,20 @@ footer {
         transition: transform 0.3s ease;
     }
 
-    /* Show navigation when the hamburger is active */
-    .header-content.active nav {
-        display: flex;
-        animation: slideDown 0.3s ease;
+    /* Transform for hamburger icon when open */
+    .header-content.open .hamburger div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
-    /* Animation for menu dropdown */
+    .header-content.open .hamburger div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header-content.open .hamburger div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Animation for dropdown */
     @keyframes slideDown {
         from {
             opacity: 0;
