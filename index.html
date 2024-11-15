@@ -17,7 +17,8 @@
                     <p>Reliable Sea Transportation, Bright Future</p>
                 </div>
             </div>
-            <nav>
+            <button class="nav-toggle" onclick="toggleNav()">☰</button> <!-- Hamburger Button -->
+            <nav class="nav-menu">
                 <a href="#about">About Us</a>
                 <a href="#services">Our Services</a>
                 <a href="#clients">Clients & Vendors</a>
@@ -124,12 +125,31 @@ function scrollToTop() {
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1); // Get the section ID without the #
-        const targetSection = document.getElementById(targetId);
 
-        // Scroll to the section with a smooth effect
-        targetSection.scrollIntoView({
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        // Scroll to the section while accounting for the header height
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition,
             behavior: 'smooth'
         });
     });
-});</script>
+});
+function toggleNav() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('show');
+}
+
+// Close the navigation menu when a link is clicked
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.remove('show'); // Hide the menu
+    });
+});
+
+</script>
