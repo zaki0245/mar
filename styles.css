@@ -341,13 +341,7 @@ footer {
         padding: 1rem;
         width: 100%;
         background: #004080;
-        transition: height 0.3s ease;
         position: relative;
-    }
-
-    /* Adjust header height when menu is open */
-    .header-content.open {
-        padding-bottom: 2rem;
     }
 
     /* Logo container */
