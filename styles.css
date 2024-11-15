@@ -342,6 +342,65 @@ footer {
         padding: 1rem;
     }
 
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-name h1 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .company-name p {
+        font-size: 0.9rem;
+    }
+
+    /* Hide the navigation links by default on mobile */
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    /* Hamburger menu icon */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+        margin-top: 1rem;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.3s ease;
+    }
+
+    /* Show navigation when the hamburger is active */
+    .header-content.active nav {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Animation for menu dropdown */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
