@@ -338,28 +338,12 @@ footer {
     .header-content {
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
-        width: 100%;
-        background: #004080;
-        position: relative;
+        gap: 1rem;
+        text-align: left;
     }
 
-    /* Logo container */
-    .logo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .company-name h1 {
-        font-size: 1.2rem;
-        color: #fff;
-        margin-top: 0.5rem;
-    }
-
-    .company-name p {
-        font-size: 0.9rem;
-        color: #d1e0f2;
+    .logo {
+        max-width: 90px;
     }
 
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
