@@ -362,64 +362,6 @@ footer {
         color: #d1e0f2;
     }
 
-    /* Hide navigation by default */
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        width: 100%;
-        background: #004080;
-    }
-
-    /* Show navigation when header is open */
-    .header-content.open nav {
-        display: flex;
-        animation: slideDown 0.3s ease forwards;
-    }
-
-    /* Hamburger menu icon */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 4px;
-        margin-top: 1rem;
-    }
-
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        transition: transform 0.3s ease;
-    }
-
-    /* Transform for hamburger icon when open */
-    .header-content.open .hamburger div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .header-content.open .hamburger div:nth-child(2) {
-        opacity: 0;
-    }
-
-    .header-content.open .hamburger div:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* Animation for dropdown */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
