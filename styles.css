@@ -18,18 +18,12 @@ header {
     background: #004080;
     color: #fff;
     padding: 1rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Adjust the content to account for the fixed header */
-body {
-    padding-top: 60px; /* Same as header height */
 }
 
 /* Header Content */
@@ -367,28 +361,25 @@ footer {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-@media (max-width: 768px) {
     .header-content {
         align-items: center;
-        gap: 1rem;
         text-align: left;
     }
     /* Hide the tagline */
     .company-name p {
-        display: none; /* Hides "Reliable Sea Transportation, Bright Future" */
+         display: none; /*Hides "Reliable Sea Transportation, Bright Future"*/
     }
 
     .logo-container {
         flex-direction: row; /* Keep logo and name side by side */
-        gap: 10px;
     }
 
     .logo {
-        max-width: 40px; /* Further reduce logo size */
+        max-width: 50px; /* Further reduce logo size */
     }
 
     .logo-container h1 {
-        font-size: 0.9rem; /* Smaller PT name */
+        font-size: 1rem; /* Smaller PT name */
     }
 
     /* Toggle Show Button */
@@ -424,9 +415,7 @@ footer {
     nav a:hover {
         background-color: #003366; /* Highlight effect */
     }
-}
-
-    
+   
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
@@ -523,34 +512,6 @@ footer {
         padding: 1rem;
         font-size: 0.9rem;
         text-align: center; /* Centers footer text */
-    }
-}
-
-@media (max-width: 480px) {
-    .company-name h1 {
-        font-size: 1.25rem;
-    }
-
-    .company-name p {
-        font-size: 0.9rem;
-    }
-
-    .section-container h2,
-    #clients h2,
-    #contact h2 {
-        font-size: 1.75rem;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    #scrollTopBtn {
-        bottom: 20px;
-        right: 20px;
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
     }
 }
 

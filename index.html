@@ -110,7 +110,8 @@
 <div id="scrollTopBtn" onclick="scrollToTop()">&#8679;</div>
 </body>
 </html>
-<script>window.onscroll = function() {
+<script>
+window.onscroll = function() {
     const scrollTopBtn = document.getElementById("scrollTopBtn");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         scrollTopBtn.classList.add("active");
@@ -151,5 +152,4 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         navMenu.classList.remove('show'); // Hide the menu
     });
 });
-
 </script>
