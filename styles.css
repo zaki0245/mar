@@ -79,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #003366; /* Warna teks saat hover menjadi biru lebih gelap */
+    color: #004080; /* Warna teks saat hover menjadi biru lebih gelap */
 }
 
 nav a::after {
@@ -178,7 +178,7 @@ nav a:hover::after {
 }
 
 .hero-btn:hover {
-    background-color: #003366;
+    background-color: #004080;
     transform: translateY(-3px);
 }
 
@@ -209,7 +209,7 @@ nav a:hover::after {
 #clients h2,
 #contact h2 {
     font-size: 2rem;
-    color: #003366;
+    color: #004080;
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -295,7 +295,7 @@ nav a:hover::after {
 }
 
 .content-text h3 {
-    color: #003366;
+    color: #004080;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 1rem;
@@ -316,7 +316,7 @@ nav a:hover::after {
     content: "✔";
     position: absolute;
     left: 0;
-    color: #003366;
+    color: #004080;
     font-size: 1.2rem;
 }
 /* Clients & Vendors Wrapper */
@@ -347,12 +347,7 @@ nav a:hover::after {
         inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
     transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
 }
-.clients-logos:hover {
-    box-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
-        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
-}
-
+.clients-logos:hover,
 .vendors-logos:hover {
     box-shadow: 
         0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
@@ -448,7 +443,7 @@ footer {
 }
 
 #scrollTopBtn:hover {
-    background-color: #003366;
+    background-color: #004080;
 }
 
 #scrollTopBtn.active {
@@ -512,7 +507,7 @@ footer {
     }
 
     nav a:hover {
-        background-color: #003366; /* Highlight effect */
+        background-color: #004080; /* Highlight effect */
     }
     .hero-section {
         height: 60vh; /* Kurangi tinggi hero section untuk perangkat kecil */
