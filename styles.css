@@ -15,10 +15,10 @@ body {
 }
 
 header {
-    background: #004080;
-    color: #fff;
-    padding: 1rem;
+    background: #ffffff; /* Warna latar belakang menjadi putih */
+    color: #004080; /* Warna teks menjadi biru gelap agar kontras */
     position: sticky;
+    padding: 0.5rem;
     top: 0;
     left: 0;
     width: 100%;
@@ -42,24 +42,25 @@ header {
 }
 
 .logo {
-    max-width: 80px;
+    max-width: 150px; /* Perbesar ukuran logo */
     border-radius: 50%;
     padding: 5px;
     background-color: white;
-    margin-right: 20px;
+
 }
+
 
 .company-name h1 {
     font-size: 1.5rem;
     margin: 0;
-    color: #fff;
+    color: #004080; /* Warna teks logo menjadi biru gelap */
 }
 
 .company-name p {
     margin: 0;
     font-size: 1rem;
     font-style: italic;
-    color: #d1e0f2;
+    color: #666666; /* Warna teks tagline menjadi abu-abu */
 }
 
 /* Navigation Links */
@@ -69,7 +70,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #004080; /* Warna teks navigasi menjadi biru gelap */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -78,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #d1e0f2;
+    color: #003366; /* Warna teks saat hover menjadi biru lebih gelap */
 }
 
 nav a::after {
@@ -88,7 +89,7 @@ nav a::after {
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background: #d1e0f2;
+    background: #004080; /* Warna garis bawah navigasi */
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
@@ -109,21 +110,90 @@ nav a:hover::after {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #fff;
+    color: #004080;
     cursor: pointer;
 }
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Teks ditempatkan di tengah secara horizontal */
+    background-image: url('images/hero.jpg'); /* Ganti dengan path ke gambar Anda */
+    background-size: cover;
+    background-position: center;
+    height: 75vh; /* Tinggi hero section diperbesar */
+    width: 100%;
+    text-align: center; /* Teks di tengah secara horizontal */
+    color: white;
+    position: relative;
+    padding: 2rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay untuk kontras teks */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px; /* Batas lebar konten untuk desktop */
+    text-align: center; /* Teks disejajarkan di tengah */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Ukuran teks lebih besar untuk desktop */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 1.25rem; /* Ukuran teks deskripsi lebih besar */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* Tombol Hero */
+.hero-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #004080;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #003366;
+    transform: translateY(-3px);
+}
+
 
 /* General Section Styling */
 .section-container,
 #clients,
 #contact {
-    padding: 2rem;
+    padding: 2.5rem;
     max-width: 1200px;
     width: 100%;
-    border-radius: 8px;
-    margin-top: 2rem;
-    background-color: #f0f8ff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 1rem auto;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 0.5s ease-out;
 }
@@ -131,84 +201,69 @@ nav a:hover::after {
 .section-container:hover,
 #clients:hover,
 #contact:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .section-container h2,
 #clients h2,
 #contact h2 {
-    font-size: 2.2rem;
-    color: #004080;
+    font-size: 2rem;
+    color: #003366;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    font-weight: 700;
 }
 
 /* About Us and Our Services Styling */
 #about,
 #services {
-    background-color: #f0f8ff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #about:hover,
 #services:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .content-wrapper {
     display: flex;
-    align-items: stretch; /* Stretch both image and text to the same height */
-    gap: 2rem;
     flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* Image Box Styling */
 .about-image,
 .services-image {
+    flex: 1;
     max-width: 300px;
-    flex-shrink: 0;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; /* Ensures the image box height adjusts based on content */
-    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image Styling */
 .about-image img,
 .services-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire box */
-    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease;
-}
-
-/* Text Box Styling */
-.content-text {
-    flex: 1; /* Ensures text box takes up remaining space */
-    max-width: 600px;
-    text-align: justify;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.7;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .about-image img:hover,
@@ -216,31 +271,117 @@ nav a:hover::after {
     transform: scale(1.05);
 }
 
+/* Text Box Styling */
+.content-text {
+    flex: 2;
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 .content-text h3 {
-    margin-top: 1.5rem;
-    color: #004080;
-    font-size: 1.3rem;
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 /* Mission List Styling */
 .content-text ul {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
 }
 
 .content-text ul li {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-indent: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .content-text ul li::before {
-    content: "•";
+    content: "✔";
     position: absolute;
     left: 0;
-    color: #004080;
+    color: #003366;
     font-size: 1.2rem;
+}
+/* Clients & Vendors Wrapper */
+.clients-vendors-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    flex-wrap: nowrap;
+}
+
+/* Clients and Vendors Boxes */
+.clients-logos,
+.vendors-logos {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    max-width: 100%;
+}
+
+/* Section Headings */
+.clients-logos h3,
+.vendors-logos h3 {
+    grid-column: 1 / -1;
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 0.5rem;
+}
+
+/* Logo Styling */
+.clients-logos img,
+.vendors-logos img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.clients-logos img:hover,
+.vendors-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    margin-bottom: 1rem;
+}
+
+.contact-wrapper {
+    text-align: center;
+}
+
+.contact-wrapper address {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 /* Footer Styling */
@@ -283,81 +424,7 @@ footer {
     visibility: visible;
 }
 
-/* Clients & Vendors Wrapper */
-.clients-vendors-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 1rem auto;
-    flex-wrap: nowrap;
-}
 
-/* Clients and Vendors Boxes */
-.clients-logos,
-.vendors-logos {
-    flex: 1;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1rem;
-    max-width: 100%;
-}
-
-/* Section Headings */
-.clients-logos h3,
-.vendors-logos h3 {
-    grid-column: 1 / -1;
-    font-size: 1.5rem;
-    color: #004080;
-    margin-bottom: 1rem;
-    text-align: center;
-    border-bottom: 2px solid #004080;
-    padding-bottom: 0.5rem;
-}
-
-/* Logo Styling */
-.clients-logos img,
-.vendors-logos img {
-    width: 80px; /* Set a fixed width */
-    height: 60px; /* Set a fixed height */
-    object-fit: contain;
-    border-radius: 4px;
-    background-color: #ffffff;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-}
-
-.clients-logos img:hover,
-.vendors-logos img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Contact Section */
-#contact {
-    margin-bottom: 1rem;
-}
-
-.contact-wrapper {
-    text-align: center;
-}
-
-.contact-wrapper address {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-    max-width: 400px;
-}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -367,7 +434,7 @@ footer {
     }
     /* Hide the tagline */
     .company-name p {
-         display: none; /*Hides "Reliable Sea Transportation, Bright Future"*/
+        font-size: 0.6rem
     }
 
     .logo-container {
@@ -375,7 +442,7 @@ footer {
     }
 
     .logo {
-        max-width: 50px; /* Further reduce logo size */
+        max-width: 85px; /* Further reduce logo size */
     }
 
     .logo-container h1 {
@@ -394,7 +461,7 @@ footer {
         position: absolute;
         top: 60px; /* Below the header */
         right: 0;
-        background: #004080;
+        background: #fff;
         width: 100%;
         padding: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -406,7 +473,7 @@ footer {
     }
 
     nav a {
-        color: white;
+        color: #004080;
         padding: 10px;
         text-align: center;
         text-decoration: none;
@@ -415,7 +482,31 @@ footer {
     nav a:hover {
         background-color: #003366; /* Highlight effect */
     }
-   
+    .hero-section {
+        height: 60vh; /* Kurangi tinggi hero section untuk perangkat kecil */
+        padding: 1rem;
+    }
+
+    .hero-content {
+        max-width: 90%; /* Perbesar ruang konten di perangkat kecil */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Kecilkan ukuran teks judul */
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Kecilkan ukuran teks deskripsi */
+    }
+
+    .hero-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem; /* Kecilkan ukuran tombol */
+    }
+    #about, #services, #clients, #contact {
+        padding: 1rem;
+    }
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
@@ -453,7 +544,7 @@ footer {
         position: absolute;
         top: 100%;
         right: 0;
-        background: #004080;
+        background: #fff;
         padding: 1rem;
         width: 100%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -470,7 +561,7 @@ footer {
     #clients,
     #contact {
         padding: 1.5rem;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         box-shadow: none;
         text-align: justify; /* Center-aligns text inside section containers */
     }
