@@ -182,6 +182,210 @@ nav a:hover::after {
     transform: translateY(-3px);
 }
 
+#about {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 15px; /* Border lebih halus */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Shadow lebih lembut */
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about:hover {
+    transform: translateY(-10px); /* Hover animasi lebih menonjol */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Shadow saat hover lebih intens */
+}
+
+.about-section {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 1rem auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out; /* Animasi masuk */
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    color: #004080;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    border-bottom: 3px solid #004080; /* Garis bawah untuk fokus */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Jarak antar elemen lebih besar */
+}
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.about-intro p {
+    font-size: 1.3rem;
+    line-height: 2; /* Jarak antar baris lebih lega */
+    color: #555;
+    max-width: 800px;
+}
+
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.vision, .mission {
+    flex: 1;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
+    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+}
+.vision:hover, .mission:hover{
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
+}
+
+.vision h2, .mission h2 {
+    border-bottom: 3px solid #004080;
+    font-size: 1.8rem;
+    color: #004080;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center; /* Buat teks rata tengah */
+}
+.vision p {
+    font-size: 1.1rem; /* Ukuran teks disamakan */
+    line-height: 1.8; /* Spasi antar baris lebih lega */
+    color: #333; /* Warna teks seragam */
+    text-align: center; 
+}
+
+/* Bullet List in Mission */
+.mission ul {
+    font-size: 1.1rem; /* Ukuran teks disamakan */
+    line-height: 1.8; /* Spasi antar baris lebih lega */
+    color: #333; /* Warna teks seragam */
+    text-align: justify; /* Rata kiri-kanan */
+    list-style: none;
+    padding-left: 0;
+    display: inline-block; /* Supaya daftar tetap terlihat rapi */
+}
+
+.mission ul li {
+    position: relative;
+    padding-left: 1.5rem; /* Jarak antara ikon dan teks */
+    margin-bottom: 0.75rem;
+}
+
+.mission ul li::before {
+    content: "✔"; /* Ikon checklist */
+    position: absolute;
+    left: 0;
+    color: #004080; /* Warna ikon biru */
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Our Services Styling */
+#services {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Image Box Styling */
+.services-image {
+    flex: 1;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.services-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Box Styling */
+.content-text {
+    flex: 2;
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
+    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+}
+.content-text:hover {
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
+}
+
+.content-text h3 {
+    color: #004080;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
 
 /* General Section Styling */
 .section-container,
@@ -217,108 +421,6 @@ nav a:hover::after {
     font-weight: 700;
 }
 
-/* About Us and Our Services Styling */
-#about,
-#services {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    margin-top: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#about:hover,
-#services:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 1.5rem;
-}
-
-/* Image Box Styling */
-.about-image,
-.services-image {
-    flex: 1;
-    max-width: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-image img,
-.services-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.about-image img:hover,
-.services-image img:hover {
-    transform: scale(1.05);
-}
-
-/* Text Box Styling */
-.content-text {
-    flex: 2;
-    max-width: 600px;
-    text-align: justify;
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
-        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
-    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
-}
-.content-text:hover {
-    box-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
-        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
-}
-
-.content-text h3 {
-    color: #004080;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-/* Mission List Styling */
-.content-text ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.content-text ul li {
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.content-text ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #004080;
-    font-size: 1.2rem;
-}
 /* Clients & Vendors Wrapper */
 .clients-vendors-wrapper {
     display: flex;
@@ -531,9 +633,15 @@ footer {
         padding: 0.5rem 1rem;
         font-size: 0.9rem; /* Kecilkan ukuran tombol */
     }
+    .about-intro {
+        flex-direction: column; /* Gambar dan teks diurutkan vertikal */
+        text-align: center; /* Teks diratakan tengah */
+    }
+
     #about, #services, #clients, #contact {
         padding: 1rem;
     }
+    
     /* Ensure Clients & Vendors Wrapper stacks vertically and text centers */
     .clients-vendors-wrapper {
         flex-direction: column;
