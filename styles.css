@@ -283,6 +283,15 @@ nav a:hover::after {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
+    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+}
+.content-text:hover {
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
 }
 
 .content-text h3 {
@@ -334,6 +343,21 @@ nav a:hover::after {
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
     max-width: 100%;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
+    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+}
+.clients-logos:hover {
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
+}
+
+.vendors-logos:hover {
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
 }
 
 /* Section Headings */
@@ -382,6 +406,15 @@ nav a:hover::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin: 0 auto;
     max-width: 400px;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
+    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+}
+.contact-wrapper address:hover {
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
+        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
 }
 
 /* Footer Styling */
