@@ -489,9 +489,87 @@ nav a:hover::after {
 #contact {
     margin-bottom: 1rem;
 }
-
-.contact-wrapper {
+.contact-section {
+    background-color: #f4f4f9;
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+.contact-header h2 {
+    font-size: 2.5rem;
+    color: #004080;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #004080;
+    background: #e6f1ff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0080ff;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #004080;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+    background-color: #0080ff;
+    transform: translateY(-3px);
 }
 
 .contact-wrapper address {
