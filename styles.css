@@ -310,7 +310,6 @@ nav a:hover::after {
 .content-text ul li {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 0.8rem;
 }
 
 .content-text ul li::before {
@@ -613,9 +612,11 @@ footer {
 
     .content-text {
         max-width: 100%;
-        padding: 1rem;
     }
 
+    .content-text h3 {
+        text-align: center;
+    }
     /* Center-align Clients and Vendors headings */
     .clients-logos h3,
     .vendors-logos h3 {
