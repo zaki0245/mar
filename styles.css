@@ -275,34 +275,34 @@ nav a:hover::after {
     text-align: center; 
 }
 .vision p {
-    font-size: 1.1rem; /* Ukuran teks disamakan */
-    line-height: 1.8; /* Spasi antar baris lebih lega */
-    color: #333; /* Warna teks seragam */
+    font-size: 1.1rem; 
+    line-height: 1.8;
+    color: #333; 
     text-align: center; 
 }
 
 /* Bullet List in Mission */
 .mission ul {
-    font-size: 1.1rem; /* Ukuran teks disamakan */
-    line-height: 1.8; /* Spasi antar baris lebih lega */
-    color: #333; /* Warna teks seragam */
-    text-align: justify; /* Rata kiri-kanan */
+    font-size: 1.1rem; 
+    line-height: 1.8; 
+    color: #333; 
+    text-align: justify; 
     list-style: none;
     padding-left: 0;
-    display: inline-block; /* Supaya daftar tetap terlihat rapi */
+    display: inline-block;
 }
 
 .mission ul li {
     position: relative;
-    padding-left: 1.5rem; /* Jarak antara ikon dan teks */
+    padding-left: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
 .mission ul li::before {
-    content: "✔"; /* Ikon checklist */
+    content: "✔"; 
     position: absolute;
     left: 0;
-    color: #004080; /* Warna ikon biru */
+    color: #004080; 
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -747,7 +747,111 @@ footer {
     #about, #services, #clients, #contact {
         padding: 1rem;
     }
+
+    .about-intro p {
+        font-size: 1rem;
+    }
+
+    .mission ul {
+        text-align: left; 
+    }
+
+        /* Content Wrapper for About Us and Services */
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-image {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .content-text {
+        max-width: 100%;
+    }
+
+    .content-text p{
+        text-align: left;
+    }
+
+    .mission ul li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.75rem;
+    }
     
+    .mission ul li::before {
+        content: "✔"; 
+        position: absolute;
+        left: 0;
+        color: #004080; 
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+        /* Content Wrapper for About Us and Services */
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-image {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .content-text {
+        max-width: 100%;
+    }
+
+    .content-text p{
+        text-align: left;
+    }
+
+    .mission ul li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .mission ul li::before {
+        content: "✔"; 
+        position: absolute;
+        left: 0;
+        color: #004080; 
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* Content Wrapper for Services */
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-image {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .content-text {
+        max-width: 100%;
+    }
+
+    .content-text p{
+        text-align: left;
+    }
+
+    .mission ul li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .mission ul li::before {
+        line-height: 1.7;
+    }
+
     .clients-vendors-wrapper {
         flex-direction: column;
         align-items: center;
@@ -770,26 +874,7 @@ footer {
         box-shadow: none;
         text-align: justify;
     }
-
-    /* Content Wrapper for About Us and Services */
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-image,
-    .services-image {
-        max-width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .content-text {
-        max-width: 100%;
-    }
-
-    .content-text h3 {
-        text-align: center;
-    }
+    
     /* Center-align Clients and Vendors headings */
     .clients-logos h3,
     .vendors-logos h3 {
