@@ -116,17 +116,16 @@ nav a:hover::after {
 .hero-section {
     display: flex;
     align-items: center;
-    justify-content: center; /* Teks ditempatkan di tengah secara horizontal */
-    background-image: url('images/hero.jpg'); /* Ganti dengan path ke gambar Anda */
+    justify-content: center;
+    background-image: url('images/hero.jpg'); /* Gambar latar */
     background-size: cover;
     background-position: center;
-    height: 75vh; /* Tinggi hero section diperbesar */
+    height: 70vh; /* Tinggi hero yang proporsional */
     width: 100%;
-    text-align: center; /* Teks di tengah secara horizontal */
-    color: white;
+    text-align: center;
+    color: #ffffff;
     position: relative;
     padding: 2rem;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
 }
 
@@ -137,48 +136,48 @@ nav a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay untuk kontras teks */
+    background: rgba(0, 0, 0, 0.4); /* Overlay sederhana untuk memperjelas teks */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px; /* Batas lebar konten untuk desktop */
-    text-align: center; /* Teks disejajarkan di tengah */
-}
-
-.hero-content h1 {
-    font-size: 3rem; /* Ukuran teks lebih besar untuk desktop */
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 1.3;
-}
-
-.hero-content p {
-    font-size: 1.25rem; /* Ukuran teks deskripsi lebih besar */
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    max-width: 750px; /* Batas lebar untuk menjaga fokus */
+    text-align: center;
     color: #f0f0f0;
 }
 
-/* Tombol Hero */
+.hero-content h1 {
+    font-size: 2.5rem; /* Ukuran teks yang lebih natural */
+    margin-bottom: 1rem;
+    font-weight: 700; /* Teks sedikit lebih tebal */
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Deskripsi lebih kecil */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #dcdcdc; /* Warna teks lembut */
+}
+
 .hero-btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #004080;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #0074d9; /* Warna biru yang lembut */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Tombol dengan sudut sedikit bulat */
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .hero-btn:hover {
-    background-color: #004080;
+    background-color: #005bb5; /* Warna hover sedikit lebih gelap */
     transform: translateY(-3px);
 }
 
