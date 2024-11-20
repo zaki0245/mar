@@ -487,64 +487,100 @@ nav a:hover::after {
 
 /* Contact Section */
 #contact {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
+
 .contact-section {
-    background-color: #f4f4f9;
-    padding: 3rem;
+    background-color: #f9f9ff; /* Warna lembut */
+    padding: 3rem 2rem;
     border-radius: 15px;
     margin: 2rem auto;
     max-width: 1200px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow lebih tegas */
     text-align: center;
     animation: fadeIn 1s ease-out;
 }
 
+/* Header */
 .contact-header {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
+
 .contact-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #004080;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: bold;
     margin-bottom: 1rem;
+    border-bottom: 3px solid #004080; /* Garis bawah dekoratif */
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 .contact-header p {
     font-size: 1.2rem;
     color: #666;
-    margin-bottom: 2rem;
-}
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    margin: 0 auto 2rem;
+    max-width: 700px; /* Lebar maksimal teks untuk fokus */
+    line-height: 1.8;
 }
 
-.contact-item {
+/* Wrapper */
+.contact-wrapper {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Untuk responsif */
+    gap: 2rem;
+    justify-content: center; /* Rata tengah */
+    align-items: flex-start; /* Konten sejajar atas */
+    margin-top: 1.5rem;
+}
+
+/* Item Styling */
+.contact-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow halus */
+    display: flex;
+    flex-direction: column; /* Tata letak vertikal */
+    align-items: center; /* Konten rata tengah */
     gap: 1rem;
     font-size: 1.2rem;
     color: #333;
+    max-width: 350px; /* Lebar maksimal */
+    min-height: 190px; 
+    flex: 1 1 300px; /* Fleksibel pada layar kecil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-item i {
-    font-size: 1.5rem;
-    color: #004080;
-    background: #e6f1ff;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Hover efek lebih tegas */
+}
+
+/* Icon Styling */
+.contact-icon {
+    width: 60px; /* Ukuran ikon */
+    height: 60px;
+    object-fit: contain; /* Gambar pas dalam box */
+    margin-bottom: 1rem;
+}
+
+/* Text Styling */
+.contact-item p {
+    margin: 0;
+    color: #555;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .contact-item a {
     color: #004080;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
@@ -552,43 +588,10 @@ nav a:hover::after {
     color: #0080ff;
 }
 
-.contact-btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #004080;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-btn:hover {
-    background-color: #0080ff;
-    transform: translateY(-3px);
-}
-
-.contact-wrapper address {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-    max-width: 400px;
-    box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.1), /* Shadow halus untuk elevasi */
-        inset 0 0 0 2px rgba(0, 64, 128, 0.15); /* Simulasi outline dengan warna lembut */;
-    transition: box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
-}
-.contact-wrapper address:hover {
-    box-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.2), /* Shadow saat hover lebih tajam */
-        inset 0 0 0 2px rgba(0, 64, 128, 0.25); /* Outline saat hover lebih tegas */;
+.contact-icon {
+    width: 40px; /* Ukuran ikon */
+    height: 40px;
+    vertical-align: middle; /* Ikon sejajar dengan teks */
 }
 
 /* Footer Styling */
@@ -604,7 +607,7 @@ footer {
 /* Scroll to Top Button */
 #scrollTopBtn {
     position: fixed;
-    bottom: 80px;
+    bottom: 40px;
     right: 40px;
     width: 40px;
     height: 40px;
@@ -808,6 +811,9 @@ footer {
     }
 
     /* Contact Section */
+    .contact-header{
+        text-align: center;
+    }
     .contact-wrapper address {
         padding: 1rem;
         max-width: 100%;
