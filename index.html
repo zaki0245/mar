@@ -61,22 +61,44 @@
             </div>
         </div>
     </section>
-<!-- Services Section -->
-<section id="services" class="section-container">
-    <h2>OUR SERVICES</h2>
-    <div class="content-wrapper">
-        <div class="services-image">
-            <img src="images/service.jpg" alt="Coal Transport Image">
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <!-- Sidebar Navigation -->
+            <div class="services-sidebar">
+                <div class="services-logo">
+                    <h3>Our<br>Services</h3>
+                </div>
+                <button class="services-tab active" data-target="barging">
+                    <img src="images/icon/barge.png" alt="Barging Icon" class="icon">
+                    <span>Barging</span>
+                </button>
+                <button class="services-tab" data-target="transshipment">
+                    <img src="images/icon/tranship.png" alt="Transshipment Icon" class="icon">
+                    <span>Transshipment</span>
+                </button>
+            </div>
+    
+            <!-- Content Area -->
+            <div class="services-content">
+                <div class="content-description active" id="barging">
+                    <h3>Barging</h3>
+                    <p>Our barging services connect multiple loading ports in Kalimantan and Sumatera with discharging ports across Sulawesi, Sumatera, and Java Island.</p>
+                </div>
+                <div class="content-description" id="transshipment">
+                    <h3>Transshipment</h3>
+                    <p>We provide transshipment services at various locations, including Taboneso, Satui, and Tanjung Pemancingan.</p>
+                </div>
+            </div>
+    
+            <!-- Background Image -->
+            <div class="services-image">
+                <img src="images/service1.jpg" class="active" alt="Barging Image" id="barging-img">
+                <img src="images/service2.jpg" alt="Transshipment Image" id="transshipment-img">
+            </div>
         </div>
-        <div class="content-text">
-            <p>We specialize in carrying bulk commodities using various sizes of tugs and barges for both transshipment and domestic shipment.</p>
-            <h3>Domestic Shipment</h3>
-            <p>Our domestic shipping services connect multiple loading ports in Kalimantan and Sumatera with discharging ports across Sulawesi, Sumatera, and Java Island.</p>
-            <h3>Transshipment</h3>
-            <p>We provide transshipment services at various locations, including Taboneso, Satui, and Tanjung Pemancingan.</p>
-        </div>
-    </div>
-</section>
+    </section>
+    
+<!-- client -->
 <section id="clients">
     <h2>CLIENTS & VENDORS</h2>
     <div class="clients-vendors-wrapper">
@@ -176,4 +198,32 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         navMenu.classList.remove('show'); // Hide the menu
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".services-tab");
+    const descriptions = document.querySelectorAll(".content-description");
+    const images = document.querySelectorAll(".services-image img");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            const target = this.getAttribute("data-target");
+
+            // Reset all tabs
+            tabs.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // Update descriptions
+            descriptions.forEach((desc) => {
+                desc.classList.remove("active");
+                if (desc.id === target) desc.classList.add("active");
+            });
+
+            // Update images
+            images.forEach((img) => {
+                img.classList.remove("active");
+                if (img.id === `${target}-img`) img.classList.add("active");
+            });
+        });
+    });
+});
+
 </script>
