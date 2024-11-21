@@ -262,7 +262,7 @@ nav a:hover::after {
 }
 
 .vision h2, .mission h2 {
-    border-bottom: 3px solid #004080;
+    border-bottom: 2px solid #004080;
     font-size: 1.8rem;
     color: #004080;
     text-transform: uppercase;
@@ -463,6 +463,18 @@ nav a:hover::after {
 
 
 /* General Section Styling */
+.clients-section {
+    background-color: #ffffff; /* Clean white background */
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+.clients-header {
+    margin-bottom: 2rem;
+}
 .section-container,
 #clients,
 #contact {
@@ -476,19 +488,28 @@ nav a:hover::after {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 0.5s ease-out;
 }
-
 .section-container h2,
 #clients h2,
 #contact h2 {
     font-size: 2rem;
     color: #004080;
-    text-align: center;
-    margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight: 700;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #004080; /* Decorative underline */
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
+.clients-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0 auto;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-top: 1rem;
+}
 /* Clients & Vendors Wrapper */
 .clients-vendors-wrapper {
     display: flex;
@@ -574,13 +595,14 @@ nav a:hover::after {
     margin-bottom: 2.5rem;
 }
 
+
 .contact-header h2 {
     font-size: 2.8rem;
     color: #004080;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 9rem;
     border-bottom: 3px solid #004080; 
     display: inline-block;
     padding-bottom: 0.5rem;
@@ -592,6 +614,7 @@ nav a:hover::after {
     margin: 0 auto 2rem;
     max-width: 700px; 
     line-height: 1.8;
+    margin-top: 1rem;
 }
 
 /* Wrapper */
@@ -818,9 +841,15 @@ footer {
         box-shadow: none;
         text-align: justify;
     }
-
+    .about-header h1{
+        font-size: 2rem;
+    }
     .about-intro p{
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .vision h2, .mission h2{
+        font-size: 1.5rem;
     }
     /* Layout Section */
     .services-container {
@@ -906,18 +935,29 @@ footer {
         line-height: 1.7;
     }
 
+    .section-container h2,
+    #clients h2,
+    #contact h2 {
+        font-size: 1.5rem;
+    }
     /* Clients and Vendors Section */
     .clients-vendors-wrapper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+        gap: 2rem; /* Maintain consistent spacing */
     }
 
     .clients-logos,
     .vendors-logos {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two logos per row */
+        grid-template-rows: auto; /* Adjust rows automatically */
+        justify-content: center; /* Center logos horizontally */
+        gap: 1rem; /* Spacing between logos */
+        width: 100%; /* Full width for the grid container */
+        max-width: 600px; /* Optional: Limit the maximum width */
+        margin: 0 auto; /* Center the grid container */
     }
 
     .clients-logos h3,
@@ -927,9 +967,14 @@ footer {
         padding-left: 0;
         margin-bottom: 1rem;
     }
+    .clients-logos img,
+    .vendors-logos img {
+        justify-self: center; /* Center individual logos within the grid */
+        align-self: center; /* Align logos vertically within the grid */
+    }
 
     /* Contact Section */
-    .contact-header {
+    .contact-header, .clients-header {
         text-align: center;
     }
 
