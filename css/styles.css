@@ -458,11 +458,16 @@ header {
     padding: 1.5rem;
     background-color: var(--light-color);
     border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Disamakan dengan Vision & Mission */
+    transition: box-shadow var(--transition-duration) ease; /* Tambahkan transition */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
+}
+
+.clients-logos:hover, .vendors-logos:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Disamakan dengan Vision & Mission */
 }
 
 .clients-logos h3, .vendors-logos h3 {
@@ -791,7 +796,12 @@ footer {
         padding: 1.5rem;
     }
 
+    .contact-item img{
+        margin-top: 1rem;
+    }
+
     .contact-item p {
+        margin-top: 1rem;
         font-size: 0.9rem;
     }
 
