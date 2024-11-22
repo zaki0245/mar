@@ -191,6 +191,8 @@ nav a:hover::after {
 }
 
 .about-section {
+    position: relative; /* Pastikan ini ada untuk posisi pseudo-elemen */
+    overflow: hidden; /* Pastikan pseudo-elemen tetap dalam container */
     background-color: #f9f9f9;
     padding: 4rem 2rem;
     border-radius: 15px;
@@ -198,6 +200,19 @@ nav a:hover::after {
     max-width: 1200px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out; 
+}
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Untuk memposisikan di tengah vertikal */
+    left: 50%; /* Untuk memposisikan di tengah horizontal */
+    width: 500px; /* Sesuaikan ukuran lebar gambar */
+    height: 500px; /* Sesuaikan ukuran tinggi gambar */
+    background: url('images/wm.png') no-repeat center center;
+    background-size: contain; /* Mengatur ukuran gambar sesuai container */
+    opacity: 0.1; /* Sesuaikan opacity sesuai keinginan */
+    z-index: 1;
+    transform: translate(-50%, -50%); /* Untuk benar-benar memusatkan gambar */
 }
 
 .about-header {
