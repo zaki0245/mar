@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Maritim Armada Raya</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="PT Maritim Armada Raya - Delivering reliable and secure sea transportation services across Indonesia.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-content">
             <div class="logo-container">
-                <img src="images/logo mar.png" alt="PT Maritim Armada Raya Logo" class="logo">
+                <img src="images/logo-mar.png" alt="PT Maritim Armada Raya Logo" class="logo">
                 <div class="company-name">
                     <h1>PT Maritim Armada Raya</h1>
                     <p>Reliable Sea Transportation, Bright Future</p>
                 </div>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()">☰</button> <!-- Hamburger Button -->
+            <button class="nav-toggle" aria-label="Toggle Navigation Menu">☰</button>
             <nav class="nav-menu">
                 <a href="#about">About Us</a>
                 <a href="#services">Our Services</a>
@@ -25,32 +26,36 @@
                 <a href="#contact">Contact Us</a>
             </nav>
         </div>
-    </header>   
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome to PT Maritim Armada Raya</h1>
-            <p>Delivering reliable and secure sea transportation services across Indonesia.</p>
-        </div>
-    </section>
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <div class="about-header">
-            <h1>About Us</h1>
-        </div>
-        <div class="about-content">
-            <div class="about-intro">
-                <p>
-                    PT Maritim Armada Raya, established in March 2022, specializes in domestic sea transportation within Indonesia, the world's largest archipelago. Focused on bulk coal transport, we play a key role in the growing coal energy sector. Supported by reputable shipping partners, our tugs and barges ensure safe and efficient delivery, driving innovation and excellence in maritime logistics.
-                </p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to PT Maritim Armada Raya</h1>
+                <p>Delivering reliable and secure sea transportation services across Indonesia.</p>
             </div>
-            <div class="about-details">
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-intro">
+                    <p>
+                        PT Maritim Armada Raya, established in March 2022, specializes in domestic sea transportation within Indonesia, the world's largest archipelago. Focused on bulk coal transport, we play a key role in the growing coal energy sector. Supported by reputable shipping partners, our tugs and barges ensure safe and efficient delivery, driving innovation and excellence in maritime logistics.
+                    </p>
+                </div>
                 <div class="vision-mission">
                     <div class="vision">
-                        <h2>Our Vision</h2>
+                        <h3>Our Vision</h3>
                         <p>To become a first-class sea transportation company in the region, known for excellent service and secure deliveries.</p>
                     </div>
                     <div class="mission">
-                        <h2>Our Mission</h2>
+                        <h3>Our Mission</h3>
                         <ul>
                             <li>Build mutually beneficial partnerships with stakeholders.</li>
                             <li>Develop human resource competencies.</li>
@@ -59,173 +64,106 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="services" class="services-section">
-        <div class="services-container">
-            <!-- Sidebar Navigation -->
-            <div class="services-sidebar">
-                <div class="services-logo">
-                    <h3>Our<br>Services</h3>
-                </div>
-                <button class="services-tab active" data-target="barging">
-                    <img src="images/icon/barge.png" alt="Barging Icon" class="icon">
-                    <span>Barging</span>
-                </button>
-                <button class="services-tab" data-target="transshipment">
-                    <img src="images/icon/tranship.png" alt="Transshipment Icon" class="icon">
-                    <span>Transshipment</span>
-                </button>
-            </div>
-    
-            <!-- Content Area -->
-            <div class="services-content">
-                <div class="content-description active" id="barging">
-                    <h3>Barging</h3>
-                    <p>Our barging services connect multiple loading ports in Kalimantan and Sumatera with discharging ports across Sulawesi, Sumatera, and Java Island.</p>
-                </div>
-                <div class="content-description" id="transshipment">
-                    <h3>Transshipment</h3>
-                    <p>We provide transshipment services at various locations, including Taboneso, Satui, and Tanjung Pemancingan.</p>
-                </div>
-            </div>
-    
-            <!-- Background Image -->
-            <div class="services-image">
-                <img src="images/service1.jpg" class="active" alt="Barging Image" id="barging-img">
-                <img src="images/service2.jpg" alt="Transshipment Image" id="transshipment-img">
-            </div>
-        </div>
-    </section>
-    
-<!-- Clients & Vendors Section -->
-<section id="clients" class="clients-section">
-    <div class="clients-header">
-        <h2>Clients & Vendors</h2>
-        <p>Our trusted partners who help us deliver excellence in maritime logistics.</p>
-    </div>
-    <div class="clients-vendors-wrapper">
-        <!-- Clients Section -->
-        <div class="clients-logos">
-            <h3>Our Clients</h3>
-            <img src="images/client/RAP.png" alt="Client 1 Logo">
-            <img src="images/client/JEA.png" alt="Client 2 Logo">
-            <img src="images/client/TIE.png" alt="Client 3 Logo">
-            <img src="images/client/CG2.png" alt="Client 4 Logo">
-            <img src="images/client/VULS.png" alt="Client 5 Logo">
-            <img src="images/client/CM.png" alt="Client 6 Logo">
-            <img src="images/client/TPM.png" alt="Client 7 Logo">
-            <img src="images/client/ABG.png" alt="Client 8 Logo">
-        </div>
-        <!-- Vendors Section -->
-        <div class="vendors-logos">
-            <h3>Our Vendors</h3>
-            <img src="images/vendor/DSA.png" alt="Vendor 1 Logo">
-            <img src="images/vendor/MBSS.png" alt="Vendor 2 Logo">
-            <img src="images/vendor/BSG.png" alt="Vendor 3 Logo">
-            <img src="images/vendor/PSRI.jpg" alt="Vendor 4 Logo">
-            <img src="images/vendor/BLS.png" alt="Vendor 5 Logo">
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="contact-header">
-        <h2>Contact Us</h2>
-        <p>We’d love to hear from you! Reach out to us through any of the channels below.</p>
-    </div>
-    <div class="contact-wrapper">
-        <div class="contact-item">
-            <img src="images/icon/office.png" alt="Company Icon" class="contact-icon">
-            <p>Graha MIR Lt. 3, Jl. Pemuda No. 9, Rawamangun, Jakarta Timur - 13220</p>
-        </div>
-        <div class="contact-item">
-            <img src="images/icon/phone.png" alt="Phone Icon" class="contact-icon">
-            <p><a href="tel:+622122487588">+62 21 22487588</a></p>
-        </div>
-        <div class="contact-item">
-            <img src="images/icon/email.png" alt="Email Icon" class="contact-icon">
-            <p><a href="mailto:admin@armadaraya.co.id">admin@armadaraya.co.id</a></p>
-        </div>
-    </div>
-</section>
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="services-container">
+                <!-- Sidebar Navigation -->
+                <div class="services-sidebar">
+                    <div class="services-logo">
+                        <h3>Our<br>Services</h3>
+                    </div>
+                    <button class="services-tab active" data-target="barging">
+                        <img src="images/icon/barge.png" alt="Barging Icon" class="icon">
+                        <span>Barging</span>
+                    </button>
+                    <button class="services-tab" data-target="transshipment">
+                        <img src="images/icon/tranship.png" alt="Transshipment Icon" class="icon">
+                        <span>Transshipment</span>
+                    </button>
+                </div>
+
+                <!-- Content Area -->
+                <div class="services-content">
+                    <div class="content-description active" id="barging">
+                        <h3>Barging</h3>
+                        <p>Our barging services connect multiple loading ports in Kalimantan and Sumatera with discharging ports across Sulawesi, Sumatera, and Java Island.</p>
+                    </div>
+                    <div class="content-description" id="transshipment">
+                        <h3>Transshipment</h3>
+                        <p>We provide transshipment services at various locations, including Taboneso, Satui, and Tanjung Pemancingan.</p>
+                    </div>
+                </div>
+
+                <!-- Background Image -->
+                <div class="services-image">
+                    <img src="images/service1.jpg" class="active" alt="Barging Image" id="barging-img">
+                    <img src="images/service2.jpg" alt="Transshipment Image" id="transshipment-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients & Vendors Section -->
+        <section id="clients" class="clients-section">
+            <div class="section-header">
+                <h2>Clients & Vendors</h2>
+            </div>
+            <p>Our trusted partners who help us deliver excellence in maritime logistics.</p>
+            <div class="clients-vendors-wrapper">
+                <!-- Clients Section -->
+                <div class="clients-logos">
+                    <h3>Our Clients</h3>
+                    <img src="images/client/RAP.png" alt="RAP Logo">
+                    <img src="images/client/JEA.png" alt="JEA Logo">
+                    <img src="images/client/TIE.png" alt="TIE Logo">
+                    <img src="images/client/CG2.png" alt="CG2 Logo">
+                    <img src="images/client/VULS.png" alt="VULS Logo">
+                    <img src="images/client/CM.png" alt="CM Logo">
+                    <img src="images/client/TPM.png" alt="TPM Logo">
+                    <img src="images/client/ABG.png" alt="ABG Logo">
+                </div>
+                <!-- Vendors Section -->
+                <div class="vendors-logos">
+                    <h3>Our Vendors</h3>
+                    <img src="images/vendor/DSA.png" alt="DSA Logo">
+                    <img src="images/vendor/MBSS.png" alt="MBSS Logo">
+                    <img src="images/vendor/BSG.png" alt="BSG Logo">
+                    <img src="images/vendor/PSRI.jpg" alt="PSRI Logo">
+                    <img src="images/vendor/BLS.png" alt="BLS Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            <p>We’d love to hear from you! Reach out to us through any of the channels below.</p>
+            <div class="contact-wrapper">
+                <div class="contact-item">
+                    <img src="images/icon/office.png" alt="Company Icon" class="contact-icon">
+                    <p>Graha MIR Lt. 3, Jl. Pemuda No. 9, Rawamangun, Jakarta Timur - 13220</p>
+                </div>
+                <div class="contact-item">
+                    <img src="images/icon/phone.png" alt="Phone Icon" class="contact-icon">
+                    <p><a href="tel:+622122487588">+62 21 22487588</a></p>
+                </div>
+                <div class="contact-item">
+                    <img src="images/icon/email.png" alt="Email Icon" class="contact-icon">
+                    <p><a href="mailto:admin@armadaraya.co.id">admin@armadaraya.co.id</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2022 PT Maritim Armada Raya. All rights reserved.</p>
     </footer>
-<div id="scrollTopBtn" onclick="scrollToTop()">&#8679;</div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
-<script>
-window.onscroll = function() {
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.classList.add("active");
-    } else {
-        scrollTopBtn.classList.remove("active");
-    }
-};
-// Function to scroll to the top of the page when the button is clicked
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        // Scroll to the section while accounting for the header height
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const targetPosition = targetSection.offsetTop - headerHeight;
-
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
-});
-function toggleNav() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('show');
-}
-
-// Close the navigation menu when a link is clicked
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.remove('show'); // Hide the menu
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".services-tab");
-    const descriptions = document.querySelectorAll(".content-description");
-    const images = document.querySelectorAll(".services-image img");
-
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", function () {
-            const target = this.getAttribute("data-target");
-
-            // Reset all tabs
-            tabs.forEach((t) => t.classList.remove("active"));
-            this.classList.add("active");
-
-            // Update descriptions
-            descriptions.forEach((desc) => {
-                desc.classList.remove("active");
-                if (desc.id === target) desc.classList.add("active");
-            });
-
-            // Update images
-            images.forEach((img) => {
-                img.classList.remove("active");
-                if (img.id === `${target}-img`) img.classList.add("active");
-            });
-        });
-    });
-});
-
-</script>
