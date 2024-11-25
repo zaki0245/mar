@@ -426,6 +426,8 @@ header {
 
 /* Clients & Vendors Section */
 .clients-section {
+    position: relative; /* Tambahkan ini untuk pseudo-elemen */
+    overflow: hidden; /* Pastikan pseudo-elemen tetap dalam container */
     background-color: var(--light-color);
     padding: var(--section-padding) 2rem;
     border-radius: 15px;
@@ -433,6 +435,20 @@ header {
     max-width: 1200px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.clients-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px; /* Atur ukuran gambar watermark */
+    height: 500px;
+    background: url('../images/wm.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.1; /* Atur tingkat transparansi */
+    z-index: 1;
+    transform: translate(-50%, -50%);
 }
 
 .clients-section p {
@@ -451,6 +467,12 @@ header {
     max-width: 800px;
     margin: 0 auto;
     flex-wrap: nowrap;
+}
+
+.clients-section p,
+.clients-vendors-wrapper {
+    position: relative;
+    z-index: 2; /* Pastikan konten berada di atas watermark */
 }
 
 .clients-logos, .vendors-logos {
@@ -496,6 +518,8 @@ header {
 
 /* Contact Section */
 .contact-section {
+    position: relative; /* Tambahkan ini untuk pseudo-elemen */
+    overflow: hidden; /* Pastikan pseudo-elemen tetap dalam container */
     background-color: var(--light-color);
     padding: var(--section-padding) 2rem;
     border-radius: 15px;
@@ -503,6 +527,26 @@ header {
     max-width: 1200px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px; /* Atur ukuran gambar watermark */
+    height: 500px;
+    background: url('../images/wm.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.1; /* Atur tingkat transparansi */
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.contact-wrapper,
+.contact-section p {
+    position: relative;
+    z-index: 2; /* Pastikan konten berada di atas watermark */
 }
 
 .contact-section p {
@@ -815,6 +859,15 @@ footer {
         padding: 1rem;
         font-size: 0.9rem;
         text-align: center;
+    }
+
+    /*wm*/
+    .about-section::before,
+    .clients-section::before,
+    .contact-section::before {
+        width: 400px;
+        height: 400px;
+        top: 30%;
     }
 }
 
