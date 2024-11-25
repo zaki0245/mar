@@ -442,8 +442,8 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px; /* Atur ukuran gambar watermark */
-    height: 500px;
+    width: 400px; /* Atur ukuran gambar watermark */
+    height: 400px;
     background: url('../images/wm.png') no-repeat center center;
     background-size: contain;
     opacity: 0.1; /* Atur tingkat transparansi */
@@ -534,8 +534,8 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px; /* Atur ukuran gambar watermark */
-    height: 500px;
+    width: 400px; /* Atur ukuran gambar watermark */
+    height: 400px;
     background: url('../images/wm.png') no-repeat center center;
     background-size: contain;
     opacity: 0.1; /* Atur tingkat transparansi */
@@ -862,11 +862,15 @@ footer {
     }
 
     /*wm*/
-    .about-section::before,
-    .clients-section::before,
-    .contact-section::before {
+    .about-section::before{
         width: 400px;
         height: 400px;
+    }
+
+    .clients-section::before,
+    .contact-section::before {
+        width: 300px;
+        height: 300px;
         top: 30%;
     }
 }
